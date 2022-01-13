@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="content">
+        <h2>Ton profil</h2>
+
+        <div class="grid-item">
+            <h3>Qui es-tu ?</h3>
+            
+            <% if (profils.length > 0) { %>
+               <% profils.forEach(profil => { %>
+                <div class="icons">
+                    <a href="/the_floor/<%= profil._id%>" style="color: green; display: flex; justify-content: flex-end;"><span class="fas fa-edit"></span></a>
+                </div>
+
+                <table>
+                    <tr>
+                        <td><strong>Nom</strong></td>
+                        <td><p class="title"><%= profil.nom %></p></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Age</strong></td>
+                        <td><p class="title"><%= profil.age %></p></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td><p class="title"><%= profil.email %></p></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudo</strong></td>
+                        <td><p class="title"><%= profil.pseudo %></p></td>
+                    </tr>   
+                </table>
+                <% }); %>
+            <% } else { %>
+                <p>Personne (encore)</p>
+            <% } %>
+        </div>
+        
+        <div class="grid-item">
+            <form action="/the_floor" method="post">
+                <h3>Créer un nouveau profil</h3>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" required>
+
+                <label for="age">Age : </label>
+                <input type="number" name="age" id="age" required>
+
+                <label for="email">Email : </label>
+                <input type="text" name="email" id="email" required>
+
+                <label for="pseudo">Pseudo : </label>
+                <input type="text" name="pseudo" id="pseudo" required>
+
+                <button type="submit"><span class="fas fa-plus"></span></button>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>

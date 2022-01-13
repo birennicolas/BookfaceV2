@@ -1,0 +1,35 @@
+<nav>
+    <div class="title">
+        <a href="/"><h1>Bookface</h1></a>
+    </div>
+    <form action="/search" method="get">
+        <input type="text" placeholder="Rechercher un profil..." id="searchbar" required>
+    </form>
+    <ul>
+        <li><a href="/the_hall">The Hall</a></li>
+        <li><a href="/the_floor"> The Floor</a></li>
+        <li><a href="/"> Admin's corner</a></li>
+    </ul>
+    <script>
+        const value = document.getElementById('searchbar');
+        console.log(value);
+        const data = {
+            searchResult : value
+        }
+        // fetch(backend, data)
+    </script>
+    <!-- <script>
+        // const searchbar = document.getElementById('searchbar').innerHTML;
+    //     const Profil = require('./models/profil');
+    //     Profil.find({nom: searchbar }, (error, data) => {
+    //     if (error) {
+    //         console.log(error)
+    //     }
+    //     else {
+    //         console.log(data)
+    //         console.log(searchbar)
+    //         res.render('search', { title:'Résultats', profils: data})
+    //     }
+    // })
+    </script> -->
+</nav>

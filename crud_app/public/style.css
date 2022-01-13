@@ -1,0 +1,114 @@
+/* Entire site */
+body {
+    font-family: Consolas;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+nav {
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#searchbar {
+    display: inline-block;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h2 {
+    margin: 2em 0em;
+    color: cornflowerblue;
+}
+h3, .title:hover {
+    color: rgb(94, 94, 252);
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        margin: 4em;
+    }
+    .content {
+        margin: 1em 6em;
+    }
+}
+
+/* Forms */
+form {
+    display: grid;
+}
+input, button {
+    margin: 1em 0em;
+    padding: 0.8em;
+    border-bottom: 1px black;
+    border-radius: 0.5em;
+}
+button {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+}
+button:hover {
+    font-weight: bold;
+    color: rgb(94, 94, 252);
+    cursor: pointer;
+}
+.cancel {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin: 1em 0em 0em;
+}
+
+/* List of all posts + profils */
+table {
+    background-color: rgba(100, 148, 237, 0.315);
+    width: 100%;
+    margin: 2em 0em;
+    padding: 1em 1.5em;
+    border-radius: 1em;
+}
+
+.single {
+    text-decoration: none;
+    border-bottom: solid cornflowerblue 2px;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 882px) {
+    .profil, .hall {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 2em;
+    }
+    .edit {
+        margin: 6em;
+    }
+}
+
+
+/* Modifying individual posts */
+.edit a {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Profile page / The Floor */
+.profil-info {
+    margin: 3em;
+    padding: 2em;
+    background-color: rgba(94, 94, 252, 0.199);
+    border-radius: 1em;
+}
+.profil {
+    margin: 3em;
+}
